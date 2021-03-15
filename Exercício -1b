@@ -1,0 +1,61 @@
+#include <stdio.h>
+
+int main(void) {
+
+  int e_nro_A,e_nro_B,e_nro_C;
+
+ printf ("Entre com o Número A:");
+ scanf("%d", &e_nro_A);
+ printf("Entre com o Número B:");  
+ scanf("%d", &e_nro_B);
+ printf("Entre com o Número C:");
+ scanf("%d", &e_nro_C);
+
+ //IF RIGHT
+
+  
+  if(e_nro_A > e_nro_B){
+    if(e_nro_B > e_nro_C){   
+   printf("Resultado:%d\n",e_nro_C); 
+   printf("          %d\n", e_nro_B );
+   printf("          %d\n", e_nro_A );
+   }
+   else{
+    if(e_nro_A > e_nro_C){
+   printf("Resultado:%d\n",e_nro_B); 
+   printf("          %d\n", e_nro_C);
+   printf("          %d\n", e_nro_A);
+   }
+    else{
+   printf("Resultado:%d\n",e_nro_B); 
+   printf("          %d\n", e_nro_A);
+   printf("          %d\n", e_nro_C);
+    }
+   }
+  }
+   // ELSE Left
+     else{
+
+     if(e_nro_A > e_nro_C){
+   printf("Resultado:%d\n",e_nro_C); 
+   printf("          %d\n", e_nro_A);
+   printf("          %d\n", e_nro_B);  
+       }
+       else{ 
+     if(e_nro_B > e_nro_C){
+   printf("Resultado:%d\n",e_nro_A); 
+   printf("          %d\n", e_nro_C);
+   printf("          %d\n", e_nro_B);
+     }
+   
+  else{
+   printf("Resultado:%d\n",e_nro_A); 
+   printf("          %d\n", e_nro_B);
+   printf("          %d\n", e_nro_C);
+      }
+     }
+    }
+
+
+  return 0;
+   }
