@@ -1,0 +1,61 @@
+#include <stdio.h>
+#include <limits.h>
+int main(void) {
+  float e_Material;
+  float e_Diâmetro,e_Comprimento,e_Temperatura;
+  float Aréa_total,calc_Res,co_Res1,co_Res2,co_Res3,co_Res4,co_Res5,e_res_referencia,e_const_tem,e_temp_uso,e_temp_ref,cod_temp_6;
+  
+  printf("Comprimento do Fio[cm]:");
+  scanf ("%f",&e_Comprimento);
+  printf("Diâmetro do Fio:");
+  scanf ("%f",&e_Diâmetro);
+  // Aréa//
+  Aréa_total = ((3.14*(e_Diâmetro*2))  / (2*2));
+   
+   //Escolha do Material//
+   printf("Qual Material há ser Utilizado? \n");
+   printf("[1] Prata\n");   
+   printf("[2] Cobre\n");   
+   printf("[3] Ouro\n");   
+   printf("[4] Alumínio\n");   
+   printf("[5] Tungstênio\n");
+   printf("[6] Escolha Outro Material\n");
+   scanf ("%f",&e_Material);
+ 
+      if (e_Material == 1) {
+     calc_Res = ((0.00159*e_Comprimento) / Aréa_total) ;       
+     printf("Resultado%f ohms", calc_Res);
+      }
+      else if (e_Material == 2) {
+     calc_Res = ((0.00172*e_Comprimento) / Aréa_total) ;       
+     printf("Resultado=%f ohms", calc_Res);
+      }
+      else if (e_Material == 3) {
+     calc_Res = ((0.00244*e_Comprimento) / Aréa_total) ;       
+     printf("Resultado=%f ohms", calc_Res);
+      }
+      else if (e_Material == 4) {
+     calc_Res = ((0.00292*e_Comprimento) / Aréa_total) ;       
+     printf("Resultado=%f ohms", calc_Res);
+      }
+      else if (e_Material == 5) {
+     calc_Res = ((0.0056*e_Comprimento) / Aréa_total) ;       
+     printf("Resultado=%f ohms", calc_Res);
+     }
+     else if (e_Material == 6) {
+       printf ("Entre com Resistencia de Referência:");
+       scanf("%f",&e_res_referencia);
+       printf("Entre com o Constante de Temperatura:");
+       scanf("%f",&e_const_tem);
+       printf("Entre com a temperatura de Uso:");
+       scanf("%f",&e_temp_uso);
+       printf("Entre com a Temperatura de Referência:");
+       scanf("%f",&e_temp_ref);
+       cod_temp_6=(e_res_referencia*((1+e_const_tem)*(e_temp_uso-e_temp_ref)));
+       calc_Res = ((cod_temp_6*e_Comprimento) / Aréa_total);      
+     printf("Resultado=%f ohms", calc_Res);
+     }else{
+       printf("Material Não Identificado");
+      }
+  return 0;
+}
