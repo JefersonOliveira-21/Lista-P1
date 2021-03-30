@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+   int main(void) {
+   int e_res_1,e_res_2,e_res_3,e_res_4;
+   int calculo_da_resistencia;
+   
+   // Entrada dos Resistores.
+    printf("Cálculo do Circuito Serie\n");
+
+   printf("Resistor 1[r]:\n");
+   scanf("%d",& e_res_1);
+
+   printf("Resistor 2[r]:\n");
+   scanf("%d",& e_res_2);
+
+   printf("Resistor 3[r]:\n");
+   scanf("%d",& e_res_3);
+
+   printf("Resistor 4[r]:\n");
+   scanf("%d",& e_res_4);
+
+   // Resolução da Resistência Equivalente.
+   
+   calculo_da_resistencia = e_res_1 + e_res_2 + e_res_3 + e_res_4;
+    printf("Valor Total da Resistência:%dohms",calculo_da_resistencia);  
+
+   return 0;
+   }
