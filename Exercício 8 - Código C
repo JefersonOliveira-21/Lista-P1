@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main(void) {
+  float e_R1,e_R2,e_R3,e_R4;
+  float calc_Req1;
+  float calc_Req2;
+  float calc_Req_Total;
+
+  // Entrada dos Resistores.
+    printf("Cálculo do Circuito Paralelo\n");
+
+ printf("Resistor 1[r]:\n");
+ scanf("%f",&e_R1);
+
+ printf("Resistor 2[r]:\n");
+ scanf("%f",&e_R2);
+
+ printf("Resistor 3[r]:\n");
+ scanf("%f",&e_R3);
+
+ printf("Resistor 4[r]:\n");
+ scanf("%f",&e_R4);
+
+ // Resolução de Req1.
+ calc_Req1 = (e_R1 * e_R2) / (e_R1 + e_R2);
+
+
+ //Resolução de Req2
+ calc_Req2 = (e_R3 * e_R4) / (e_R3 + e_R4);
+
+
+ // Resolução de Req Total.
+ calc_Req_Total = (calc_Req1 * calc_Req2) /(calc_Req1+calc_Req2);
+
+ printf("Resistência Total= %f ohms",calc_Req_Total);
+
+
+  
+  return 0;
+}
